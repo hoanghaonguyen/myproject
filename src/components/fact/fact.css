@@ -1,0 +1,13 @@
+.facts {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+        url(../../images/aboutUs/bg-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.bg-primary {
+    background-color: #2EB872 !important;
+}
+
+.text-primary {
+    color: #2EB872 !important;
+}

@@ -1,0 +1,56 @@
+/*** Team Start ***/
+.team .team-item {
+    position: relative;
+    background: #2EB872;
+    border-radius: 10px;
+}
+
+.team .team-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: var(--bs-dark);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.team .team-item:hover:after {
+    height: 100%;
+}
+
+.team .team-item .team-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.team .team-item .team-content .team-icon {
+    background: var(--bs-light);
+    border-radius: 10px;
+    display: flex;
+    display: inline-flex;
+}
+
+.team .team-item .team-content h4,
+.team .team-item .team-content p {
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-content h4 {
+    color: #2EB872;
+}
+
+.team .team-item .team-content p {
+    color: var(--bs-white);
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-content p {
+    color: #b2bec3;
+}
+
+/*** Team End ***/

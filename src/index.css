@@ -7,25 +7,11 @@
 }
 
 body {
-  --primary-color: #2eb872;
+  /* --primary-color: #2eb872;
   --secondary-color: #006b36;
-  --third-color: #e0610c;
+  --third-color: #e0610c; */
 
   font-family: "Bai Jamjuree", sans-serif;
-  background-color: aqua;
+  /* background-color: aqua; */
   /* background-image: url(./images/home/body.img.png); */
-}
-
-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
 }
