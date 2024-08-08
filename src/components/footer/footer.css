@@ -1,0 +1,51 @@
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../../images/aboutUs/banner.png) center center no-repeat;
+    background-size: cover;
+}
+
+.footer .footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .footer-item a {
+    line-height: 35px;
+    color: #7f8c8d;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.footer .footer-item p {
+    line-height: 35px;
+    color: #7f8c8d;
+}
+
+.footer .footer-item a:hover {
+    color: #2EB872;
+}
+
+.footer .footer-item .footer-btn a,
+.footer .footer-item .footer-btn a i {
+    transition: 0.5s;
+
+}
+
+.footer .footer-item .footer-btn a:hover {
+    background: #fff;
+}
+
+.footer .footer-item .footer-btn a:hover i {
+    color: var(--bs-primary);
+}
+
+.footer .footer-item .opening-date {
+    border-bottom: 1px solid rgba(255, 255, 255, 0, 8);
+}
+
+.footer .footer-item .opening-date .opening-clock {
+    display: flex;
+    align-items: center;
+    line-height: 35px;
+
+}

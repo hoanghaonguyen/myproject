@@ -1,7 +1,7 @@
-import React from 'react'
-import './ourTeam.css'
+import React from "react";
+import "./ourTeam.css";
 import { Container, Row, Col } from "reactstrap";
-import team1 from "../../images/team/team-1.jpg"
+import team1 from "../../images/team/team-1.jpg";
 import team2 from "../../images/team/team-2.jpg";
 import team3 from "../../images/team/team-3.jpg";
 
@@ -77,7 +77,7 @@ const OurTeam = () => {
             </div>
           </Col>
 
-          <Col md="4" lg="6" xl="4">
+          <Col md="6" lg="6" xl="4">
             <div className="team-item p-4">
               <div className="team-content">
                 <div className="d-flex justify-content-between border-bottom pb-4">
@@ -128,7 +128,7 @@ const OurTeam = () => {
             </div>
           </Col>
 
-          <Col md="4" lg="6" xl="4">
+          <Col md="6" lg="6" xl="4">
             <div className="team-item p-4">
               <div className="team-content">
                 <div className="d-flex justify-content-between border-bottom pb-4">
@@ -182,6 +182,6 @@ const OurTeam = () => {
       </Container>
     </Container>
   );
-}
+};
 
-export default OurTeam
+export default OurTeam;

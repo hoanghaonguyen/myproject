@@ -1,0 +1,88 @@
+.testimonial {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../../images/event/adult1.4.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+    animation: image-zoom 10s 1s infinite alternate;
+    transition: 1s;
+}
+
+@keyframes image-zoom {
+    0% {
+        width: 100%;
+        height: 100%;
+    }
+
+    25% {
+        width: 115%;
+        height: 115%;
+    }
+
+    50% {
+        width: 130%;
+        height: 130%;
+    }
+
+    75% {
+        width: 120%;
+        height: 120%;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.testimonial::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.testimonial .testimonial-item {
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(256, 256, 256, 0.2);
+}
+
+.testimonial-item .testimonial-inner {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-item .testimonial-inner .testimonial-img {
+    position: relative;
+}
+
+.testimonial-item .testimonial-inner .testimonial-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 2px solid #fff;
+}
+
+.testimonial-item .testimonial-inner .testimonial-img .testimonial-quote {
+    position: absolute;
+    top: 0;
+    left: -25px;
+    color: #fff;
+    background: #2EB872;
+}

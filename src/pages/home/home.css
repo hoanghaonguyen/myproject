@@ -347,7 +347,7 @@
 }
 
 .visiting-hours {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../../images/aboutUs/bg-2.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../../images/service/banner.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -372,6 +372,8 @@
 .visiting-hours .table tr:last-child td {
     border: none;
 }
+
+
 
 
 /*** Animal ***/

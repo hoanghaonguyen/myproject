@@ -6,6 +6,9 @@ import Fact from "../../components/fact/Fact";
 import OurServices from "../../components/our-services/OurServices";
 import OurAnimals from "../../components/our-animals/OurAnimals";
 import OurTeam from "../../components/our-team/OurTeam";
+import Visiting from "../../components/visiting/Visiting";
+import Testimonials from "../../components/testimonials/Testimonials";
+import Footer from "../../components/footer/Footer";
 
 export default function Home() {
   return (
@@ -15,7 +18,10 @@ export default function Home() {
       <Fact />
       <OurServices />
       <OurAnimals />
-      <OurTeam/>
+      <Visiting />
+      <OurTeam />
+      <Testimonials />
+      <Footer />
     </>
   );
 }

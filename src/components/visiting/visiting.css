@@ -1,0 +1,26 @@
+.visiting-hours {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../../images/service/banner.png) center center no-repeat;
+    background-size: cover;
+}
+
+.visiting-hours .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* .visiting-hours .table {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.visiting-hours .table td {
+    padding: 0.5rem 1rem;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.visiting-hours .table tr:last-child td {
+    border: none;
+} */
