@@ -55,19 +55,19 @@ const Footer = () => {
           <Col md="6" lg="6" xl="2">
             <div className="footer-item">
               <h4 className="text-white mb-4">Support</h4>
-              <Link to="/about">
+              <Link to="#">
                 <i class="fas fa-angle-right me-2"></i> Privacy Policy
               </Link>
-              <Link to="/about">
+              <Link to="#">
                 <i class="fas fa-angle-right me-2"></i> Terms & Conditions
               </Link>
-              <Link to="/about">
+              <Link to="#">
                 <i class="fas fa-angle-right me-2"></i> Support
               </Link>
-              <Link to="/about">
+              <Link to="#">
                 <i class="fas fa-angle-right me-2"></i> FAQ
               </Link>
-              <Link to="/about">
+              <Link to="#">
                 <i class="fas fa-angle-right me-2"></i> Help
               </Link>
             </div>

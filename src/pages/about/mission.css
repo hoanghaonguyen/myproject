@@ -1,0 +1,54 @@
+.mission {
+    width: 80%;
+    height: 100%;
+    margin: 100px auto 0 auto;
+}
+
+.mission .text .card-title-1 {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.mission .text .card-title-1::before {
+    position: absolute;
+    content: "";
+    width: 70px;
+    display: block;
+    height: 3px;
+    background-color: #2eb872;
+    bottom: -35%;
+}
+
+.mission .text .card-title-1::before .mission .text .card-title span {
+    color: #2eb872;
+    font-weight: 600;
+}
+
+.mission .left {
+    padding-right: 50px;
+}
+
+.mission .animal .picture img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.mission .text .number {
+    margin-top: 30px;
+}
+
+.mission .text .number h1 {
+    color: #2eb872;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.mission .text .number h3 {
+    font-size: 18px;
+    text-align: center;
+}
