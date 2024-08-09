@@ -1,8 +1,13 @@
 import React from 'react'
+import Gallery from './Gallery'
+import Banner from './../about/Banner';
 
 const Discovery = () => {
   return (
-    <div>Discovery</div>
+    <>
+      <Banner />
+      <Gallery />
+    </>
   )
 }
 

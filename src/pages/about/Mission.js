@@ -9,6 +9,13 @@ const Mission = () => {
       <Container>
         <Row className="align-items-center">
           <Col lg="6" sm="12">
+            <div className="animal">
+              <div className="picture">
+                <img src={mission} alt="" />
+              </div>
+            </div>
+          </Col>
+          <Col lg="6" sm="12">
             <div className="left">
               <div className="text">
                 <h3 className="card-title-1">Mission</h3>
@@ -55,13 +62,6 @@ const Mission = () => {
                     </Col>
                   </Row>
                 </div>
-              </div>
-            </div>
-          </Col>
-          <Col lg="6" sm="12">
-            <div className="animal">
-              <div className="picture">
-                <img src={mission} alt="" />
               </div>
             </div>
           </Col>

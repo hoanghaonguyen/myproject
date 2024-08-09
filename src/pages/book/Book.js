@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import GetTicket from "../../components/getticket/GetTicket";
 
 const Book = () => {
   return (
-    <div>Book</div>
-  )
-}
+    <>
+      <GetTicket />
+    </>
+  );
+};
 
-export default Book
+export default Book;

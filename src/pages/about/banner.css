@@ -11,11 +11,27 @@
 }
 
 .banner .text .card-title-1 {
+    position: relative;
     color: #fff;
+}
+
+.banner .text .card-title-1::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    display: block;
+    height: 3px;
+    background-color: #2eb872;
+    bottom: -15%;
 }
 
 .banner .text .card-title {
     color: #fff;
+}
+
+.banner .text .card-title span {
+    color: #2eb872;
+    font-weight: 600;
 }
 
 .banner .bannerImg {
@@ -87,4 +103,3 @@
 .bcrumb ul.breadcrumb li a:hover {
     text-decoration: underline;
 }
-

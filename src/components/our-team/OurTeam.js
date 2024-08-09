@@ -7,7 +7,7 @@ import team3 from "../../images/team/team-3.jpg";
 
 const OurTeam = () => {
   return (
-    <Container fluid className="team pb-5">
+    <Container fluid className="team pb-5 my-3">
       <Container className="pb-5">
         <div className="text-center mx-auto pb-5" style={{ maxWidth: "800px" }}>
           <h4>

@@ -8,7 +8,6 @@ import {
   NavLink,
   NavbarToggler,
   Collapse,
-  Container,
   Button,
 } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -74,9 +73,10 @@ const Header = () => {
               </NavLink>
             </NavItem>
           </Nav>
-          <Button color="success" tag={Link} to="/get-ticket">
-            Get Ticket
-          </Button>
+          <Link to='/book' className="btn btn-primary">
+            Buy Ticket
+            <i className="fa fa-arrow-right ms-3"></i>
+          </Link>
         </Collapse>
       </Navbar>
     </>

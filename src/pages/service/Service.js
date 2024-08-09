@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import './service.css'
+import OurServices from "./../../components/our-services/OurServices";
+import Banner from "../about/Banner";
+import TitleService from "./TitleService";
 
 const Service = () => {
   return (
-    <div>Service</div>
-  )
-}
+    <>
+      <Banner />
+      <TitleService />
+      <OurServices />
+    </>
+  );
+};
 
-export default Service
+export default Service;
