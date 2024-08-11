@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./visiting.css";
-import { Col, Container, ListGroup, ListGroupItem, Table } from "reactstrap";
+import { Col, Container, ListGroup, ListGroupItem, } from "reactstrap";
 import { Row } from "reactstrap";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Visiting = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="container-xxl bg-primary visiting-hours my-5 py-5">
+    <div className="container-xxl bg-primary visiting-hours my-5 py-5" data-aos="fade-up"
+      data-aos-duration="3000">
       <Container className="py-5">
         <Row className="g-5">
           <Col md="6">

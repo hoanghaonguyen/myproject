@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './titleService.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TitleService = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className='ourservice'>
+    <div className='ourservice' data-aos="zoom-in">
        <h3 className='title'>OUR SERVICES</h3>
        <div className="text">
             <p className="card-text">

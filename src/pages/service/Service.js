@@ -3,6 +3,7 @@ import './service.css'
 import OurServices from "./../../components/our-services/OurServices";
 import Banner from "../about/Banner";
 import TitleService from "./TitleService";
+import ScrollToTop from "../../components/scrolltotop/ScrollToTop";
 
 const Service = () => {
   return (
@@ -10,6 +11,7 @@ const Service = () => {
       <Banner />
       <TitleService />
       <OurServices />
+      <ScrollToTop />
     </>
   );
 };

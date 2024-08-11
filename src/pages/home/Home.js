@@ -8,10 +8,13 @@ import OurAnimals from "../../components/our-animals/OurAnimals";
 import OurTeam from "../../components/our-team/OurTeam";
 import Visiting from "../../components/visiting/Visiting";
 import Testimonials from "../../components/testimonials/Testimonials";
+import ScrollToTop from "../../components/scrolltotop/ScrollToTop";
+//import Loading from "../../components/loading/Loading";
 
 export default function Home() {
   return (
     <>
+      {/* <Loading /> */}
       <Banner />
       <About />
       <Fact />
@@ -20,6 +23,8 @@ export default function Home() {
       <Visiting />
       <OurTeam />
       <Testimonials />
+      <ScrollToTop />
+
     </>
   );
 }

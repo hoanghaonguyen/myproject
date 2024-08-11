@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -8,13 +8,87 @@ import {
   Input,
   Button,
 } from "reactstrap";
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import { BarLoader } from "react-spinners";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // check if required fields are empty
+    if (!name || !email || !subject || !message) {
+      alert("All fields are required!");
+      Swal.fire({
+        title: "Required",
+        text: "All fields are required!",
+        icon: "question"
+      });
+      return;
+    }
+
+    setLoading(true); // show loading spinner
+    // Your EmailJS service ID, template ID, and public key 
+    const serviceID = "service_1z0i5cp00";
+    const templateID = "template_k6753ih";
+    const publicKey = "aKdSpH011sM0d1DmZ";
+
+    // Create a new object that contains dynamic template params
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "ZooFari",
+      subject: subject,
+      message: message,
+    };
+
+    // Send an email using EmailJS send method
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        setLoading(false); // hide loading spinner
+        Swal.fire({
+          title: "Good job!",
+          text: "Email sent successfully!",
+          icon: "success"
+        });
+        console.log("Success!", response);
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      })
+      .catch((error) => {
+        setLoading(false); // hide loading spinner
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Failed to send email. Please try again later.",
+        });
+        console.log("Failed...", error);
+      });
+
+  }
   return (
     <div className="container-xxl py-5">
       <Container>
         <Row className="g-4 mb-5">
-          <Col lg="4">
+          <Col lg="4" data-aos="fade-up"
+     data-aos-duration="3000">
             <div className="h-100 bg-light d-flex align-items-center p-5">
               <div className="btn-lg-square bg-white flex-shrink-0">
                 <i class="fa fa-map-marker-alt text-primary"></i>
@@ -30,7 +104,8 @@ const Contact = () => {
               </div>
             </div>
           </Col>
-          <Col lg="4">
+          <Col lg="4" data-aos="fade-up"
+     data-aos-duration="3000">
             <div className="h-100 bg-light d-flex align-items-center p-5">
               <div className="btn-lg-square bg-white flex-shrink-0">
                 <i class="fa fa-phone-alt text-primary"></i>
@@ -44,7 +119,8 @@ const Contact = () => {
               </div>
             </div>
           </Col>
-          <Col lg="4">
+          <Col lg="4" data-aos="fade-up"
+     data-aos-duration="3000">
             <div className="h-100 bg-light d-flex align-items-center p-5">
               <div className="btn-lg-square bg-white flex-shrink-0">
                 <i class="fa fa-envelope-open text-primary"></i>
@@ -61,7 +137,7 @@ const Contact = () => {
         </Row>
 
         <Row className="g-5">
-          <Col lg="6">
+          <Col lg="6" data-aos="zoom-in-up">
             <p>
               <span className="text-primary me-2">#</span>
               Contact US
@@ -70,7 +146,7 @@ const Contact = () => {
               Have Any Questions? Please Contact Us!
             </h1>
 
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <Row>
                 <Col md={6}>
                   <FormGroup>
@@ -79,6 +155,9 @@ const Contact = () => {
                       name="text"
                       placeholder="*Your name..."
                       type="text"
+                      required
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </FormGroup>
                 </Col>
@@ -89,6 +168,9 @@ const Contact = () => {
                       name="email"
                       placeholder="*Your email..."
                       type="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </FormGroup>
                 </Col>
@@ -98,6 +180,9 @@ const Contact = () => {
                     name="subject"
                     placeholder="*Subject..."
                     type="text"
+                    required
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
                   />
                 </FormGroup>
                 <FormGroup>
@@ -106,14 +191,19 @@ const Contact = () => {
                     name="text"
                     type="textarea"
                     placeholder="*Message..."
+                    required
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </FormGroup>
               </Row>
 
-              <Button className="btn-primary">Send Message</Button>
+              <Button className="btn-primary">
+                {loading ? <BarLoader color="#fff" /> : "Send Message"}
+              </Button>
             </Form>
           </Col>
-          <Col lg="6">
+          <Col lg="6" data-aos="zoom-in-up">
             <div className="h-100" style={{ minHeight: "400px" }}>
               <iframe
                 className="rounded w-100 h-100"

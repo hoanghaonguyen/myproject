@@ -155,6 +155,82 @@
     z-index: 2;
 }
 
+.form .chooseticket {
+    background-color: white;
+    padding: 20px;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: rgba(100, 100, 111, 0.681) 0px 7px 29px 0px;
+  }
+  .form .chooseticket .title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+  }
+  .chooseticket .item {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 10px 0;
+  }
+  .chooseticket .item:nth-child(3) {
+    border-bottom: none;
+  }
+  
+  .chooseticket .item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .chooseticket .item .right {
+    margin: 10px;
+  }
+  .chooseticket .item .name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  
+  .chooseticket .item .name h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: auto 0;
+  }
+  .chooseticket .item .price p {
+    color: var(--third-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin: auto 0;
+  }
+  .chooseticket .item .name button {
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    color: blue;
+    font-size: 18px;
+  }
+  .chooseticket .item .money {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .chooseticket .item .money .number {
+    display: flex;
+    align-items: center;
+  }
+  .chooseticket .item .money input {
+    font-size: 24px;
+    border: 2px solid black;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 12px;
+  }
+
 @media (max-width: 1200px) {
     .getticket .title {
         font-size: 70px;
@@ -206,3 +282,4 @@
         padding: 8px 20px;
     }
 }
+

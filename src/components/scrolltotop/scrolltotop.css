@@ -1,0 +1,40 @@
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #006b36;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* scroll-to-top-button hover*/
+.scroll-to-top-button:hover {
+    /* animation */
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+/* scroll-to-top-button animation */
+@keyframes shake {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    
+}
+
+
+.scroll-to-top-icon {
+    font-size: 20px;
+}

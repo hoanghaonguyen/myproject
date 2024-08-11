@@ -1,12 +1,18 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import "./testimonials.css";
 import Slider from "react-slick";
 import { Container } from "reactstrap";
 import testimonial1 from "../../images/home/feedback.1.png";
 import testimonial2 from "../../images/home/feedback.2.png";
 import testimonial3 from "../../images/home/feedback.3.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Testimonials = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   var settings = {
     dots: false,
     infinite: true,
@@ -22,6 +28,8 @@ const Testimonials = () => {
         <div
           className="text-center mx-auto pb-5"
           style={{ maxWidth: "800px;" }}
+          data-aos="fade-up"
+     data-aos-duration="3000"
         >
           <h4 className="text-primary">Testimonials</h4>
           <h1 className="display-5 text-white mb-4">Our Clients Reviews</h1>
@@ -34,7 +42,8 @@ const Testimonials = () => {
         </div>
 
         <Slider {...settings}>
-          <div className="testimonial-item p-4">
+          <div className="testimonial-item p-4" data-aos="fade-up"
+     data-aos-duration="3000">
             <p className="text-white fs-4 mb-4">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
               mollitia fugiat, nihil autem reprehenderit aperiam maxime minima

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, CardImg, Col, Container, Row, Button } from "reactstrap";
 import gallery from "../../images/gal/gallery-.png";
 import gallery1 from "../../images/gal/gallery-1.png";
@@ -24,8 +24,16 @@ import gallery20 from "../../images/gal/gallery-20.png";
 import gallery21 from "../../images/gal/gallery-21.png";
 import gallery22 from "../../images/gal/gallery-22.png";
 import gallery23 from "../../images/gal/gallery-23.png";
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Gallery = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   const images = [
     gallery,
     gallery1,
@@ -81,14 +89,19 @@ const Gallery = () => {
     <Container className="py-5 my-3">
       <Row className="g-4">
         {currentImages.map((image, index) => (
-          <Col sm="6" lg="4" key={index}>
-            <Card>
-              <CardImg
-                alt={`Gallery image ${index + 1}`}
-                src={image}
-                top
-                width="100%"
-              />
+          <Col sm="6" lg="4" key={index} >
+            <Card data-aos="flip-left">
+              <Zoom>
+                <CardImg
+                  alt={`Gallery image ${index + 1}`}
+                  src={image}
+                  top
+                  width="100%"
+                  style={{
+                          objectFit: "cover",
+                          cursor: "pointer" }}
+                />
+              </Zoom>
             </Card>
           </Col>
         ))}

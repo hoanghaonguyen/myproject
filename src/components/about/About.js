@@ -1,19 +1,20 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col, Button } from "reactstrap";
-import WOW from "wowjs";
 import "./about.css";
 import about_img from "../../images/aboutUs/aboutus.pic.3.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
   useEffect(() => {
-    new WOW.WOW().init();
+    AOS.init({ duration: 1500 });
   }, []);
 
   return (
     <Container fluid className="py-5">
       <Container>
         <Row className="g-5">
-          <Col lg="6" className="wow fadeInUp" data-wow-delay="0.1s">
+          <Col lg="6" data-aos="fade-right" data-aos-duration="1500" >
             <p>
               <span className="text-success me-2">#</span>Welcome To Zoofari
             </p>
@@ -46,7 +47,7 @@ const About = () => {
               Read More
             </Button>
           </Col>
-          <Col lg="6" className="wow fadeInUp" data-wow-delay="0.5s">
+          <Col lg="6" data-aos="fade-left" data-aos-duration="1500">
             <div className="img-border">
               <img className="img-fluid" src={about_img} alt="About Zoofari" />
             </div>

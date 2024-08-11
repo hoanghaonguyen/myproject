@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ourTeam.css";
 import { Container, Row, Col } from "reactstrap";
 import team1 from "../../images/team/team-1.jpg";
 import team2 from "../../images/team/team-2.jpg";
 import team3 from "../../images/team/team-3.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const OurTeam = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <Container fluid className="team pb-5 my-3">
       <Container className="pb-5">
-        <div className="text-center mx-auto pb-5" style={{ maxWidth: "800px" }}>
+        <div className="text-center mx-auto pb-5" style={{ maxWidth: "800px" }} data-aos="fade-up"
+          data-aos-duration="3000">
           <h4>
             <span className="text-primary">#</span> Meet Our Team
           </h4>
@@ -25,7 +31,9 @@ const OurTeam = () => {
           </p>
         </div>
         <Row className="g-4 justyfy-content-center">
-          <Col md="6" lg="6" xl="4">
+          <Col md="6" lg="6" xl="4" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
             <div className="team-item p-4">
               <div className="team-content">
                 <div className="d-flex justify-content-between border-bottom pb-4">
@@ -77,7 +85,9 @@ const OurTeam = () => {
             </div>
           </Col>
 
-          <Col md="6" lg="6" xl="4">
+          <Col md="6" lg="6" xl="4" data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
             <div className="team-item p-4">
               <div className="team-content">
                 <div className="d-flex justify-content-between border-bottom pb-4">
@@ -128,7 +138,9 @@ const OurTeam = () => {
             </div>
           </Col>
 
-          <Col md="6" lg="6" xl="4">
+          <Col md="6" lg="6" xl="4" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
             <div className="team-item p-4">
               <div className="team-content">
                 <div className="d-flex justify-content-between border-bottom pb-4">
