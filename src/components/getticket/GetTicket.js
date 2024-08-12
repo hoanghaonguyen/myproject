@@ -309,7 +309,7 @@ const GetTicket = () => {
               </Col>
             </Row>
             <div className="d-flex">
-              <div className="button" data-aos="fade-up">
+              <div className="button">
                 <button className="btn" type="submit" disabled={loading}>
                   {/* {loading ? <Spinner size="sm" color="light" /> : "PROCEED CHECK OUT"}  */}
 

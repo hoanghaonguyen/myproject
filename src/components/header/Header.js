@@ -10,6 +10,7 @@ import {
   Collapse,
   Button,
 } from "reactstrap";
+import { BsCartPlus } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./header.css"; // Custom CSS for additional styling
 import logo from "../../images/logo.png";
@@ -18,6 +19,12 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+  const handleNavLinkClick = () => {
+    if (isOpen) {
+      toggle(); // Close the menu if it's open
+    }
+  };
 
   return (
     <>
@@ -43,40 +50,46 @@ const Header = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mx-auto" navbar>
             <NavItem>
-              <NavLink tag={Link} to="/">
+              <NavLink tag={Link} to="/" onClick={handleNavLinkClick}>
                 Home
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/about">
+              <NavLink tag={Link} to="/about" onClick={handleNavLinkClick}>
                 About Us
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/discovery">
+              <NavLink tag={Link} to="/discovery" onClick={handleNavLinkClick}>
                 Discovery
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/event">
-                Event
+              <NavLink tag={Link} to="/shop" onClick={handleNavLinkClick}>
+                Souvernir
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/service">
+              <NavLink tag={Link} to="/service" onClick={handleNavLinkClick}>
                 Service
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/contact">
+              <NavLink tag={Link} to="/contact" onClick={handleNavLinkClick}>
                 Contact
               </NavLink>
             </NavItem>
           </Nav>
-          <Link to='/book' className="btn btn-primary">
-            Buy Ticket
-            <i className="fa fa-arrow-right ms-3"></i>
-          </Link>
+          <div className="d-flex align-items-center" >
+            <Link to='/cart' className="btn btn-outline-secondary me-2"
+            onClick={handleNavLinkClick}>
+              <BsCartPlus size={20} />
+            </Link>
+            <Link to='/book' className="btn btn-primary" onClick={handleNavLinkClick}>
+              Buy Ticket
+              <i className="fa fa-arrow-right ms-2"></i>
+            </Link>
+          </div>
         </Collapse>
       </Navbar>
     </>
