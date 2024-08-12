@@ -12,7 +12,7 @@ const Footer = () => {
           <Col md="6" lg="6" xl="4">
             <div className="footer-item">
               <Link to="/" className="p-0">
-                <h4 className="text-white mb-4">Safari</h4>
+                <h4 className="text-white mb-4">ZooFari</h4>
               </Link>
               <p className="mb-2">
                 Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem
@@ -34,7 +34,7 @@ const Footer = () => {
           </Col>
           <Col md="6" lg="6" xl="2">
             <div className="footer-item">
-              <h4 className="text-white mb-4">Vietnam Safari</h4>
+              <h4 className="text-white mb-4">ZooFari</h4>
               <Link to="/about">
                 <i class="fas fa-angle-right me-2"></i> About Us
               </Link>

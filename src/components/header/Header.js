@@ -35,7 +35,7 @@ const Header = () => {
           to set the bar for science, conservation action, and education.
         </p>
       </div>
-      <Navbar color="light" light expand="md" fixed-top>
+      <Navbar color="light" light expand="md" fixed="top">
         <NavbarBrand href="/">
           <img
             alt="logo"
