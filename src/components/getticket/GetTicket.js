@@ -93,9 +93,9 @@ const GetTicket = () => {
 
     // Create a new object that contains dynamic template params
     const templateParams = {
-      from_name: firstname + " " + lastname,
-      from_email: email,
-      to_name: "ZooFari",
+      from_name: "ZooFari",
+      to_email: email,
+      to_name: firstname + " " + lastname,
       message: `
         <h3>Your Information: </h3>
         <p> - Mr/Mrs: ${firstname} ${" "} ${lastname} </p>
@@ -107,7 +107,7 @@ const GetTicket = () => {
         <p> - Adult: $50/person x ${adultQuantity}</p>
         <p> - Child: $40/person x ${childQuantity}</p>
         <h1>Total Amount: $${totalAmount}</h1>
-        `
+        `,
     };
 
     // Send an email using EmailJS send method

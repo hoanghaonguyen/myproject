@@ -9,7 +9,8 @@ const initialState = {
   selectedProduct: null, // to store a single product
   status: "start",
   error: null,
-  totalPage: 30
+  totalPage: 4,
+  currentPage: 1
 };
 
 //URL

@@ -31,6 +31,7 @@ const Products = () => {
   }, [currentPage]);
 
   const handlePageChange = (pageNumber) => {
+    console.log(`active page is ${pageNumber}`);
     setCurrentPage(pageNumber);
   };
 
@@ -79,8 +80,8 @@ const Products = () => {
         <Pagination
           activePage={currentPage}
           itemsCountPerPage={6}
-          totalItemCount={20}
-          pageRangeDisplayed={5}
+          totalItemCount={23}
+          pageRangeDisplayed={2}
           onChange={handlePageChange}
         />
       </Row>

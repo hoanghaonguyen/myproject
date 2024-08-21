@@ -1,4 +1,4 @@
-.pagination {
+/* .pagination {
     justify-content: center;
     display: flex;
     padding-left: 0;
@@ -30,5 +30,15 @@
             }
         }
     }
-}
+} */
 
+.pagination li a {
+    position: relative;
+    display: block;
+    padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
+    font-size: var(--bs-pagination-font-size);
+    color: var(--bs-pagination-color);
+    text-decoration: none;
+    background-color: var(--bs-pagination-bg);
+    border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
+}
